@@ -1,11 +1,11 @@
   applications:
-  - name: dealerreiew
+  - name: djangoapp
     routes:
-      - route: host.domain
-    memory: 128M
+      - route: $HOST.$DOMAIN
+    memory: 64M
     buildpack: python_buildpack
-  - name: dealerreiew-nginx
+  - name: djangoapp-nginx
     routes:
-      - route: host.domain/static
-    memory: 128M
+      - route: $HOST.$DOMAIN/static
+    memory: 64M
     buildpack: staticfile_buildpack
